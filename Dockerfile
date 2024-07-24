@@ -1,5 +1,6 @@
-From node:alpine
-COPY /home/ubuntu/
+FROM node:12.2.0-alpine
+WORKDIR app
+COPY . .
 RUN npm install
 EXPOSE 8000
-CMD ["npm", "start"]
+CMD ["node","app.js"]
